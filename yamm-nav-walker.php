@@ -20,6 +20,10 @@ class Yamm_Nav_Walker extends Walker_Nav_Menu
     {
         $output .= ($depth == 0) ? "\n<ul class=\"dropdown-menu\">\n" . "\n<div class=\"yamm-content\">\n" . "\n<div class=\"row\">\n" : "\n<ul class=\"elementy-ul yamm-fw\">\n";
     }
+    function end_lvl(&$output, $depth = 0, $args = array())
+    {
+        $output .= ($depth == 0) ? "\n</div>\n" . "\n</div>\n" . "\n</ul>\n" : "\n</ul>\n";
+    }
 
 
     function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
@@ -141,6 +145,10 @@ class Yamm_Fw_Nav_Walker extends Walker_Nav_Menu
     function start_lvl(&$output, $depth = 0, $args = array())
     {
         $output .= ($depth == 0) ? "\n<ul class=\"dropdown-menu\">\n" . "\n<div class=\"yamm-content\">\n" . "\n<div class=\"row\">\n" : "\n<ul class=\"elementy-ul yamm-fw\">\n";
+    }
+    function end_lvl(&$output, $depth = 0, $args = array())
+    {
+        $output .= ($depth == 0) ? "\n</div>\n" . "\n</div>\n" . "\n</ul>\n" : "\n</ul>\n";
     }
 
 
